@@ -1,10 +1,15 @@
 // To avoid store values for this tail end recursion by using this method
 
-
+function basicRecursion(n,k) {
+    if(k > n) return;
+    console.log("k value : ",k)
+    basicRecursion(n,k+1);
+}
+basicRecursion(3,1);
 // Normal Recursion Will store the value inside stack - Not Tail end Recursion
 // Method 1
 
-function recursion(n) {
+function recursion4(n) {
 
     if(n==0) return;
 
@@ -39,4 +44,5 @@ function recursive(n) {
 }
 
 recursive(5);
+
 
