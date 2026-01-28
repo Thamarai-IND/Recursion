@@ -46,3 +46,25 @@ function recursive(n) {
 recursive(5);
 
 
+
+// For Merge Sort works using 3 operations:  Division, Recursion, Merge. So it is not considered as Tailend Recursion.
+// Q: Can you convert all the functions that are there into tail and recursive ? 
+// A: No, Because after recursion call, immediately merge operation going to happen. So merge sort cannot be converted.
+// But Converting all the functions into tail end recursion is possible only on Quick Sort.
+// In Quick Sort using pivot element(to get the current position, for approaching left part and right part side ), here you can use tailend recursion
+// Quick Sort is faster than Merge Sort
+// In Tree Traversal InOrder(left,root,right), PreOrder(root,left,right) using tailend recursion but PostOrder(left,rigth,root) is not using tailend recursion.
+
+
+// tailend recursion - factorial
+
+function factorial(n,k) {
+    if( n === 0 | n === 1) return k;
+    return factorial(n-1,k * n);
+}
+
+const response = factorial(5,1);
+
+console.log("factorial 3 : ",response);
+
+// tailend recursion is always best for better time complexity
