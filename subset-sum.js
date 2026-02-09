@@ -43,3 +43,5 @@ if (result) {
 } else {
     console.log("No subset with given sum");
 }
+
+// time complexity is O(2^n)
